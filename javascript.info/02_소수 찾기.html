@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>0 ~ n 까지의 숫자 중 소수 찾기</title>
+  <script>
+    /*
+
+    let num = prompt("임의의 숫자를 입력해주세요.", '');
+
+    for (let i = 2; i <= num; i++) {
+
+      for (let j = 2; j <= i; j++) {
+          if ((i != j) && (i%j == 0)) break;
+          if (i == j) console.log(i);
+          if (i%j != 0) continue;
+      }
+
+    }
+
+    */
+
+    let n = prompt("임의의 숫자를 입력해주세요.", '');
+
+    nextPrime:
+    for (let i = 2; i <= n; i++) {
+
+      for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue nextPrime;
+      }
+
+      console.log(i);
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+</html>
