@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>'?'나 '||'를 사용하여 함수 다시 작성하기</title>
+</head>
+
+<body>
+  <script>
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      } else {
+        return confirm('보호자의 동의를 받으셨나요?');
+      }
+    }
+
+    function checkAge2(age) {
+      if (age > 18) {
+        return true;
+      }
+      return confirm('보호자의 동의를 받으셨나요?');
+    }
+
+    function checkAge3(age) {
+      return (age > 18) ? true : confirm('보호자의 동의를 받으셨나요?');
+    }
+
+    function checkAge4(age) {
+      return (age > 18) || confirm('보호자의 동의를 받으셨나요?');
+    }
+  </script>
+</body>
+</html>

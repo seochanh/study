@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>'?'나 '||'를 사용하여 함수 다시 작성하기</title>
+</head>
+
+<body>
+  <script>
+    /*
+    function pow(x,n) {
+      return x ** n;
+    }
+
+    let x = prompt("x?", '');
+    let n = prompt("y?", '');
+
+    if (n < 1) {
+      alert(`${n}은 양의 정수이어야 합니다.`);
+    } else {
+      alert( pow(x, n) );
+    }
+    */
+
+    function pow(x,n) {
+      let result = x;
+
+      for (let i = 1; i < n; i++) {
+        result *= x;
+      }
+
+      return result;
+    }
+
+    let x = prompt("x?", '');
+    let n = prompt("y?", '');
+
+    if (n < 1) {
+      alert(`${n}은 양의 정수이어야 합니다.`)
+    } else {
+      alert( pow(x, n) );
+    }
+  </script>
+</body>
+</html>
